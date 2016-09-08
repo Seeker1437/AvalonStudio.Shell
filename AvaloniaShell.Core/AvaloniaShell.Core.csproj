@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D28B621-CB26-4C17-857F-4AA8AE2AC2A2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvaloniaShell.Core</RootNamespace>
+    <AssemblyName>AvaloniaShell.Core</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\CommandDefinition.cs" />
+    <Compile Include="Commands\CommandDefinitionAttribute.cs" />
+    <Compile Include="Commands\CommandDefinitionBase.cs" />
+    <Compile Include="Commands\CommandHandlerAttribute.cs" />
+    <Compile Include="Commands\CommandHandlerWrapper.cs" />
+    <Compile Include="Commands\CommandKeyboardShortcut.cs" />
+    <Compile Include="Commands\CommandKeyGestureService.cs" />
+    <Compile Include="Commands\CommandListDefinition.cs" />
+    <Compile Include="Commands\CommandService.cs" />
+    <Compile Include="Commands\ExcludeCommandKeyboardShortcut.cs" />
+    <Compile Include="Commands\ICommandHandler.cs" />
+    <Compile Include="Commands\ICommandKeyGestureService.cs" />
+    <Compile Include="Commands\ICommandService.cs" />
+    <Compile Include="Commands\ICommandUiItem.cs" />
+    <Compile Include="Controls\ControlTheme.paml..cs">
+      <DependentUpon>ControlTheme.paml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewModelViewHost.cs" />
+    <Compile Include="Dialogs\ModalDialogViewModelBase.cs" />
+    <Compile Include="Util\Extensions.cs" />
+    <Compile Include="Extensions\IExtension.cs" />
+    <Compile Include="IoC.cs" />
+    <Compile Include="MainMenu\IMenu.cs" />
+    <Compile Include="MainMenu\IMenuBuilder.cs" />
+    <Compile Include="MainMenu\MenuBuilder.cs" />
+    <Compile Include="MainMenu\MenuDefinitions.cs" />
+    <Compile Include="MainMenu\Models\CommandMenuItem.cs" />
+    <Compile Include="MainMenu\Models\MenuItemBase.cs" />
+    <Compile Include="MainMenu\Models\MenuItemSeparator.cs" />
+    <Compile Include="MainMenu\Models\MenuModel.cs" />
+    <Compile Include="MainMenu\Models\StandardMenuItem.cs" />
+    <Compile Include="MainMenu\Models\TextMenuItem.cs" />
+    <Compile Include="MainMenu\ViewModels\MainMenuView.paml.cs" />
+    <Compile Include="MainMenu\ViewModels\MainMenuViewModel.cs" />
+    <Compile Include="Menus\CommandMenuItemDefinition.cs" />
+    <Compile Include="Menus\ExcludeMenuDefinition.cs" />
+    <Compile Include="Menus\ExcludeMenuItemDefinition.cs" />
+    <Compile Include="Menus\ExcludeMenuItemGroupDefinition.cs" />
+    <Compile Include="Menus\IMenuItem.cs" />
+    <Compile Include="Menus\MenuBarDefinition.cs" />
+    <Compile Include="Menus\MenuDefinition.cs" />
+    <Compile Include="Menus\MenuDefinitionAttribute.cs" />
+    <Compile Include="Menus\MenuDefinitionBase.cs" />
+    <Compile Include="Menus\MenuItemDefinition.cs" />
+    <Compile Include="Menus\MenuItemGroupDefinition.cs" />
+    <Compile Include="Menus\TextMenuItemDefinition.cs" />
+    <Compile Include="MVVM\BindableCollection.cs" />
+    <Compile Include="MVVM\IObservableCollection.cs" />
+    <Compile Include="MVVM\ObservableCollectionExtensions.cs" />
+    <Compile Include="MVVM\ViewLocator.cs" />
+    <Compile Include="MVVM\ViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shell\IShell.cs" />
+    <Compile Include="ToolBars\CommandToolBarItemDefinition.cs" />
+    <Compile Include="ToolBars\ExcludeToolBarDefinition.cs" />
+    <Compile Include="ToolBars\ExcludeToolBarItemDefinition.cs" />
+    <Compile Include="ToolBars\ExcludeToolBarItemGroupDefinition.cs" />
+    <Compile Include="ToolBars\IToolBar.cs" />
+    <Compile Include="ToolBars\IToolBarBuilder.cs" />
+    <Compile Include="ToolBars\IToolBars.cs" />
+    <Compile Include="ToolBars\Models\CommandToolBarItem.cs" />
+    <Compile Include="ToolBars\Models\ToolBarItemBase.cs" />
+    <Compile Include="ToolBars\Models\ToolBarItemSeparator.cs" />
+    <Compile Include="ToolBars\Models\ToolBarModel.cs" />
+    <Compile Include="ToolBars\ToolBarBuilder.cs" />
+    <Compile Include="ToolBars\ToolBarDefinition.cs" />
+    <Compile Include="ToolBars\ToolBarItemDefinition.cs" />
+    <Compile Include="ToolBars\ToolBarItemGroupDefinition.cs" />
+    <Compile Include="ToolBars\ViewModels\ToolBarsViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Avalonia.Animation, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Animation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Avalonia.Base, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Avalonia.Controls, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Controls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Avalonia.DesignerSupport, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.DesignerSupport.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Avalonia.Diagnostics, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Diagnostics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Avalonia.HtmlRenderer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.HtmlRenderer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Avalonia.Input, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Input.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Avalonia.Interactivity, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Avalonia.Layout, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Layout.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Avalonia.Logging.Serilog, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Logging.Serilog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Avalonia.Markup, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Markup.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Avalonia.Markup.Xaml, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Markup.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Avalonia.ReactiveUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.ReactiveUI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Avalonia.SceneGraph, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.SceneGraph.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Avalonia.Styling, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Styling.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Avalonia.Themes.Default, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Themes.Default.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog, Version=1.5.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.1.5.14\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10\Serilog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Splat, Version=1.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Splat.1.6.2\lib\Portable-net45+win+wpa81+wp80\Splat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sprache, Version=2.0.0.50, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sprache.2.0.0.50\lib\portable-net4+netcore45+win8+wp8+sl5+MonoAndroid+Xamarin.iOS10+MonoTouch\Sprache.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Composition.AttributedModel, Version=1.0.30.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.30\lib\portable-net45+win8+wp8+wpa81\System.Composition.AttributedModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Composition.Convention, Version=1.0.30.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.30\lib\portable-net45+win8+wp8+wpa81\System.Composition.Convention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Composition.Hosting, Version=1.0.30.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.30\lib\portable-net45+win8+wp8+wpa81\System.Composition.Hosting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Composition.Runtime, Version=1.0.30.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.30\lib\portable-net45+win8+wp8+wpa81\System.Composition.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Composition.TypedParts, Version=1.0.30.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.30\lib\portable-net45+win8+wp8+wpa81\System.Composition.TypedParts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Core.3.0.0\lib\netstandard1.1\System.Reactive.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=3.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Interfaces.3.0.0\lib\netstandard1.0\System.Reactive.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=3.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Linq.3.0.0\lib\netstandard1.1\System.Reactive.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=3.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.PlatformServices.3.0.0\lib\netstandard1.0\System.Reactive.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainMenu\ViewModels\MainMenuView.paml" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Controls\ControlTheme.paml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
